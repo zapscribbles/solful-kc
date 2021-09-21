@@ -4,65 +4,9 @@ permalink: /
 js: index.js
 eleventyNavigation:
   key: Home
-extraNav:
-  -
-    key: CustomNavFunction
-    url: '#'
-    title: Custom Nav Function
-    clickFunc: $store.navFunctions.customFunction()
-  -
-    key: HelpModal
-    url: '#'
-    title: Help
-    clickFunc: $store.modals.toggleModal('help')
-  -
-    key: FAQModal
-    url: '#'
-    title: FAQ
-    clickFunc: $store.modals.toggleModal('faq')
 ---
-
-{# Modals #}
-<div x-data>
-    {% set modalID = "faq" %}
-    {% include "partials/modal.njk" %}
-    {% set modalID = "help" %}
-    {% include "partials/modal.njk" %}
-</div>
-
-<div x-data="componentData" class="text-center m-20">
-    <div>Hi</div>
-    <span x-text="message"></span>
-    {% set tooltipText = "This is a tooltip" %}
-    {% include "partials/tooltip.njk" %}
-</div>
-
-<button id="insert-btn" class="border p-2 rounded-md border-black hover:bg-gray-100">Insert Row</button>
-<script>
-    const insertBtn = document.getElementById('insert-btn');
-    // const responseText = document.getElementById('response-output')
-
-    insertBtn.addEventListener('click', async () => {
-        const response = await fetch('/.netlify/functions/supabase'/*, {
-            method: 'POST',
-            body: JSON.stringify({region: 'kanto'})
-        }*/).then(response => response.json())
-        console.log(JSON.stringify(response))
-    })
-</script>
-
-<button id="fetch-kanto-btn" class="border p-2 rounded-md border-black hover:bg-gray-100">Fetch Kanto Pokedex</button>
-<p id="response-output" class="text-red-800">Response Placeholder</p>
-
-<script>
-    const fetchKantoBtn = document.getElementById('fetch-kanto-btn')
-    const responseText = document.getElementById('response-output')
-
-    fetchKantoBtn.addEventListener('click', async () => {
-        const response = await fetch('/.netlify/functions/pokedex', {
-            method: 'POST',
-            body: JSON.stringify({region: 'kanto'})
-        }).then(response => response.json())
-        responseText.innerText = JSON.stringify(response)
-    })
-</script>
+<h1>This is a H1</h1>
+<div class="my-10 max-w-4xl mx-auto">Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec.</div>
+<h2>This is a H2</h2>
+<h3>This is a H3</h3>
+<h4>This is a H4</h4>

@@ -1,0 +1,13 @@
+---
+layout: body
+eleventyNavigation:
+  key: Logo Experiment
+---
+{# Add this line to the top of the SVG file (just below the xml tag) to enable animations:
+<?xml-stylesheet type="text/css" href="/css/logo-style.css"?>
+And add this line at the end of the file, right before the closing SVG tag:
+    <script xlink:href="/logo-animation.js"></script>
+#}
+<object class="max-w-3xl m-auto" type="image/svg+xml" data="/assets/logo.svg"></object>
+{# <img src="/assets/logo.svg"></img> #}
+<script>// Empty script tag prevents Chrome bug that causes transitions to fire on page load https://stackoverflow.com/questions/14389566/stop-css-transition-from-firing-on-page-load</script>

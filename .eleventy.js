@@ -12,11 +12,13 @@ module.exports = function (eleventyConfig) {
     // Setup files
     eleventyConfig.addWatchTarget('./_tmp/style.css');
     eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './css/style.css' });
+    eleventyConfig.addPassthroughCopy({ 'src/styles/logo-style.css': './css/logo-style.css' });
     eleventyConfig.addPassthroughCopy('src/common-js/*.js');
     eleventyConfig.addPassthroughCopy('src/**/*.js');
     eleventyConfig.addPassthroughCopy('assets/*.png');
     eleventyConfig.addPassthroughCopy('assets/*.jpg');
     eleventyConfig.addPassthroughCopy('assets/*.ico');
+    eleventyConfig.addPassthroughCopy('assets/*.svg');
     eleventyConfig.addPassthroughCopy({ 'src/_data/*.json': 'data' });
     eleventyConfig.addPassthroughCopy('assets/uploads/*.*');
     eleventyConfig.addPassthroughCopy('admin');

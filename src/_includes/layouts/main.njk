@@ -1,12 +1,8 @@
 ---
-title: 11ty Boilerplate
+title: Solful Kitchen Creations
 js:
 fontAwesomeKitID: 2229cc8bf4
-googleFontsURL: <style>@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins&display=swap');</style>
-extraNav:
-  -
-    key: CMS Admin
-    url: 'admin'
+googleFontsURL: <style> @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto&display=swap'); </style>
 wip: true
 ---
 <!DOCTYPE html>
@@ -29,7 +25,7 @@ wip: true
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
         {% if js %}
-            <script src="{{ js }}?v={% version %}"></script>
+            <script src="/{{ js }}?v={% version %}"></script>
         {% endif %}
 
         {{ googleFontsURL | safe }}

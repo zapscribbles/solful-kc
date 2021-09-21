@@ -1,0 +1,44 @@
+/* #Background {
+    display: none;
+} */
+
+/* g {
+    transform-origin: center;
+} */
+
+svg {
+    /* background-color: lightgray; */
+    --mousePosFactor: 1;
+}
+
+#Shine {
+    transform-origin: 190px 180px;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#Text {
+    --xOffset: -5px;
+    transform: translateX(calc(var(--xOffset) * var(--mousePosFactor)));
+}
+
+#TextShadow {
+    --xOffset: -10px;
+    --yOffset: -4px;
+    transform: translate(calc(var(--xOffset) * var(--mousePosFactor)), calc(var(--yOffset) * var(--mousePosFactor)));
+}
+
+#Text,
+#TextShadow {
+    /* transition: transform 0.3s; */
+}
+
+svg:hover #Text,
+svg:hover #TextShadow {
+    /* transform: translate(0); */
+}

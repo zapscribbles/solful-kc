@@ -8,16 +8,18 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                lightest: '#B9D6F2',
-                light: '#A9CDEF',
-                darkBlue: '#061A40',
-                mediumBlue: '#0353A4',
-                regularBlue: '#006DAA',
-                greyBlue: '#003559',
+                pageBg: '#fff',
+                lightest: '#FFEFD6',
+                lighter: '#FFC958',
+                light: '#FFBD59',
+                darkBase: '#000000',
+                darkHighlight: '#997135',
+                button: '#51A488',
+                buttonHover: '#3D7B66',
             },
             fontFamily: {
-                heading: ['Patua One', 'sans-serif'],
-                body: ['Poppins', 'sans-serif'],
+                heading: ['Amatic SC', 'sans-serif'],
+                body: ['Roboto', 'sans-serif'],
             },
         },
     },
