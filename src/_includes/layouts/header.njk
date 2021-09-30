@@ -2,12 +2,12 @@
 layout: main
 ---
 
-<nav class="bg-myGreen" x-data="{ isOpen: false }">
+<nav class="bg-myGreen fixed w-full" x-data="{ isOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
-        <div class="flex items-center justify-between ">
+        <div class="flex items-start justify-between ">
             <div class="flex items-center max-h-full">
                 <div class="flex-shrink h-48">
-                    <img class="max-h-full" src="/assets/logo.png">
+                    <img class="max-h-full opacity-0" src="/assets/logo.png">
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
@@ -15,8 +15,7 @@ layout: main
                     </div>
                 </div>
             </div>
-
-            <div class="-mr-2 flex md:hidden">
+            <div class="-mr-2 flex md:hidden mt-2">
                 <!-- Mobile menu button -->
                 <button type="button" @click="isOpen = !isOpen" class="btn inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>

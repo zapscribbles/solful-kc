@@ -3,7 +3,7 @@ title: Solful Kitchen Creations
 js:
 fontAwesomeKitID: 2229cc8bf4
 googleFontsURL: <style> @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto&display=swap'); </style>
-wip: true
+wip: false
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ wip: true
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
         {% if js %}
-            <script src="/{{ js }}?v={% version %}"></script>
+            <script defer src="/{{ js }}?v={% version %}"></script>
         {% endif %}
 
         {{ googleFontsURL | safe }}

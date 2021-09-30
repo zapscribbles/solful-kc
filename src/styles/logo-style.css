@@ -33,12 +33,8 @@ svg {
     transform: translate(calc(var(--xOffset) * var(--mousePosFactor)), calc(var(--yOffset) * var(--mousePosFactor)));
 }
 
-#Text,
-#TextShadow {
-    /* transition: transform 0.3s; */
-}
-
-svg:hover #Text,
-svg:hover #TextShadow {
-    /* transform: translate(0); */
+#SubtitleShadow {
+    --xOffset: -1.2px;
+    --yOffset: -1.2px;
+    transform: translate(calc(var(--xOffset) * var(--mousePosFactor)), calc(var(--yOffset) * var(--mousePosFactor)));
 }
