@@ -78,21 +78,16 @@ function progressAnimation(scrollPos) {
             widthValue < logoFinishWidth ? (widthValue = logoFinishWidth) : null;
             svgObject.style.width = widthValue + 'vw';
 
-            var paddingValue = (1 - movePercentage) * logoFinishPadding;
-            paddingValue < logoFinishPadding ? (paddingValue = logoFinishPadding) : null;
+            var paddingValue = movePercentage * logoFinishPadding;
+            paddingValue > logoFinishPadding ? (paddingValue = logoFinishPadding) : null;
             svgObject.style.padding = paddingValue + 'px';
-
-            // Reduce margin top of page content to give illusion of scrolling
-            // var contentMarginValue = headerHeight + (animationScrollHeight - headerHeight) * (1 - scrollPercentage);
-            // var contentMarginValue = animationScrollHeight * movePercentage;
-            // contentMarginValue < headerHeight ? (contentMarginValue = headerHeight) : null;
-            // pageContent.style.paddingTop = contentMarginValue + 'px';
         }
 
-        if (scrollPos > animationScrollHeight - headerHeight) {
-            // pageContent.style.paddingTop = headerHeight + 'px';
-            // animationCompleted = true;
-        }
+        // Stop the animation from happening again once it's finished
+        // if (scrollPos > animationScrollHeight - headerHeight) {
+        //     pageContent.style.paddingTop = headerHeight + 'px';
+        //     animationCompleted = true;
+        // }
 
         console.log('scrollPos', scrollPos, 'scrollPercentage', scrollPercentage);
     }
