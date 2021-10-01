@@ -1,8 +1,10 @@
 ---
 layout: header
+paddingTop: 165
+headerHeight: 165
 ---
 
-<main class="mx-auto lg:mt-14">
+<main class="mx-auto lg:mt-14" style="padding-top: {{paddingTop}}px;">
     {% block content %}
         {{ content | safe }}
     {% endblock %}
