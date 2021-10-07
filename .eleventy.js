@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
         return Date(now);
     });
 
-    eleventyConfig.addNunjucksShortcode;
+    // eleventyConfig.addNunjucksShortcode;
 
     eleventyConfig.addFilter('log', value => {
         console.log(value);
