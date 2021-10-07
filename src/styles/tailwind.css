@@ -17,7 +17,7 @@ a {
 }
 
 body {
-    @apply font-body bg-pageBg text-darkBase;
+    @apply font-body bg-pageBg text-darkBase text-center;
 }
 
 h1,
@@ -30,7 +30,8 @@ h6 {
 }
 
 h1 {
-    @apply lg:text-6xl text-4xl my-4 font-bold;
+    @apply lg:text-6xl text-5xl my-8 font-bold relative m-auto;
+    width: fit-content;
 }
 
 h2 {
@@ -83,4 +84,25 @@ nav.btn.active {
 
 .faq-question {
     @apply font-bold mt-4;
+}
+
+.home-page-text-block {
+    @apply px-4 my-20;
+}
+
+.accent {
+    @apply absolute bottom-3 right-2 !important;
+    /* @apply text-button; */
+}
+
+.accent-0 {
+    @apply text-button;
+}
+
+.accent-1 {
+    @apply text-darkHighlight;
+}
+
+.accent-2 {
+    @apply text-light;
 }

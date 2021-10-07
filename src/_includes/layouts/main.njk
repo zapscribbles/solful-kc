@@ -18,15 +18,20 @@ wip: false
         <link rel="stylesheet" href="/css/style.css?v={% version %}"/>
         <link rel="shortcut icon" href="/assets/favicon.ico"/>
 
+        {% if js %}
+            <script defer src="/{{ js }}?v={% version %}"></script>
+        {% endif %}
+        {% if extraJs %}
+            <script defer src="/{{ extraJs }}?v={% version %}"></script>
+        {% endif %}
+
         <script src="https://kit.fontawesome.com/{{ fontAwesomeKitID }}.js" crossorigin="anonymous"></script>
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="/common-js/bundle.js?v={% version %}"></script>
         <script src="/usefulFuncs.js"></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-        {% if js %}
-            <script defer src="/{{ js }}?v={% version %}"></script>
-        {% endif %}
 
         {{ googleFontsURL | safe }}
 

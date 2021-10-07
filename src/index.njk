@@ -1,12 +1,47 @@
 ---
 layout: body
-permalink: /format-test/
 js: index.js
+extraJs: scroll-animation.js
 eleventyNavigation:
-  key: Format Test
+  key: Home
 ---
-<h1>This is a H1</h1>
-<div class="my-10 max-w-4xl mx-auto">Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec.</div>
-<h2>This is a H2</h2>
-<h3>This is a H3</h3>
-<h4>This is a H4</h4>
+<object id="svg-logo" class="z-20 fixed left-0 opacity-0 transition-opacity duration-300 h-1/2 w-screen" data="/assets/logo-raw.svg" onload="svgLoaded(this.contentDocument.querySelector('svg'))"></object>
+<div id="page-content-container" class="bg-white" style="padding-top: 100vh">
+    <img src="assets/uploads/pineapple-salsa.jpg"/>
+    <div class="home-page-text-block">
+        {% set accentColour = 0 %}
+        <h1>New discoveries {{ accentColour }}
+            {{accent}}
+            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
+            {% set accentColour = accentColour + 1 %}
+        </h1>
+        <div>Solful Kitchen Creations is a unique experience encompassing the concept of culture in its entirety. Incorporating  together the love of cuisine, music, art, dance, and decor, pioneering Chef James brings you to a world unexplored. </div>
+    </div>
+    <img src="assets/uploads/tacos.png"/>
+    <div class="home-page-text-block">
+        <h1>An inspired infusion{{ accentColour }}
+            {{accent}}
+            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
+            {% set accentColour = accentColour + 1 %}
+        </h1>
+        <div>The vision of Solful Kitchen Creations is to infuse together the flavorful palettes of the Diasporic experience one plate at a time. Through Southern African- American, Latin American, and Caribbean flavors you’re sent on a journey to taste love and history. </div>
+    </div>
+    <img src="assets/uploads/corn-fritters.jpg"/>
+    <div class="home-page-text-block">
+        <h1>What we do{{ accentColour }}
+            {{accent}}
+            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
+            {% set accentColour = accentColour + 1 %}
+        </h1>
+        <div>The mission and goal of Solful Kitchen Creations is to shed light on the celebration that food offers. Each dish is rich in creativity and flavor.</div>
+    </div>
+    <img src="assets/uploads/corn-fritters.jpg"/>
+    <div class="home-page-text-block">
+        <h1>Lorem ipsum{{ accentColour }}
+            {{accent}}
+            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
+            {% set accentColour = accentColour + 1 %}
+        </h1>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec. </div>
+    </div>
+</div>

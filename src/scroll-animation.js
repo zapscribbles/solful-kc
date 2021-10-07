@@ -89,7 +89,7 @@ function progressAnimation(scrollPos) {
         //     animationCompleted = true;
         // }
 
-        console.log('scrollPos', scrollPos, 'scrollPercentage', scrollPercentage);
+        // console.log('scrollPos', scrollPos, 'scrollPercentage', scrollPercentage);
     }
 }
 
@@ -111,7 +111,7 @@ function svgLoaded(loadedSvg) {
 
     // console.log(svg);
     // Create a gap to push content down while SVG is visible (this gap will close as the user scrolls)
-    console.log('animationScrollHeight', animationScrollHeight);
+    // console.log('animationScrollHeight', animationScrollHeight);
     pageContent.style.paddingTop = animationScrollHeight + 'px';
     // console.log(document.querySelector('#svg-gap'));
     // Sets an appropriate transform origin for shine rays
