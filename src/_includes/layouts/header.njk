@@ -1,14 +1,17 @@
 ---
 layout: main
+displayLogo: true
 ---
 
 <nav class="bg-white fixed w-full z-10" style="height: {{headerHeight}}px;" x-data="{ isOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+        {% if displayLogo %}
+            <a href="/" class="absolute top-1 left-1 h-32">
+                <img class="max-h-full" src="/assets/logo-cropped.png">
+            </a>
+        {% endif %}
         <div class="flex items-center w-full justify-end">
             {# <div class="flex items-center max-h-full">
-                <div class="flex-shrink h-48">
-                    <img class="max-h-full opacity-0" src="/assets/logo.png">
-                </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         {% include "partials/header-menu.njk" %}

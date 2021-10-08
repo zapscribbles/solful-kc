@@ -2,19 +2,45 @@ backend:
     name: git-gateway
     branch: main
 
+local_backend: true
+
 media_folder: '_site/assets/uploads'
 public_folder: '/assets/uploads'
 
 collections:
-    - name: 'posts'
-      label: 'Posts'
-      folder: 'src/posts'
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    - name: 'page-content'
+      label: 'Page Content'
+      create: false
+      editor:
+          preview: false
+      files:
+          - label: 'Home Page'
+            name: 'home'
+            file: 'src/_data/homePageContent.json'
+            fields:
+                # - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'body' }
+                - label: Blocks
+                  name: blocks
+                  widget: list
+                  fields:
+                      - { label: 'Title', name: 'title', widget: 'string' }
+                      - { label: 'Text', name: 'text', widget: 'text' }
+                      - { label: 'Image', name: 'image', widget: 'image' }
+                - { label: 'Separator Image', name: 'separatorImage', widget: 'image' }
+    - label: Services
+      name: services
       create: true
+      editor:
+          preview: false
+      folder: 'src/services'
       fields:
-          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+          - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'service' }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string' }
-          - { label: 'Date', name: 'date', widget: 'date', default: '' } # Setting default to "" means you have the option to not enter a value at all?
-          - { label: 'Post Body', name: 'body', widget: 'markdown' }
-          - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
+          - { label: 'Summary (shown on home page)', name: 'summary', widget: 'string' }
+          - { label: 'Full Description', name: 'description', widget: 'markdown' }
+          - { label: 'Main Image', name: 'mainImage', widget: 'image' }
+          - label: Other Images
+            name: otherImages
+            widget: list
+            fields:
+                - { label: 'Image', name: 'image', widget: 'image' }

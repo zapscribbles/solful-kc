@@ -4,48 +4,34 @@ js: index.js
 extraJs: scroll-animation.js
 eleventyNavigation:
   key: Home
+displayLogo: false
+headerHeight: 165
 ---
 <object id="svg-logo" class="z-20 fixed left-0 opacity-0 transition-opacity duration-300 h-1/2 w-screen" data="/assets/logo-raw.svg" onload="svgLoaded(this.contentDocument.querySelector('svg'))"></object>
-<div id="page-content-container" class="bg-white" style="padding-top: 100vh">
-    <img src="assets/uploads/pineapple-salsa.jpg"/>
-    <div class="home-page-text-block">
-        {% set accentColour = 0 %}
-        <h1>New discoveries
-        {# {{ accentColour }}
-            {{accent}} #}
-            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
-            {% set accentColour = accentColour + 1 %}
-        </h1>
-        <div>Solful Kitchen Creations is a unique experience encompassing the concept of culture in its entirety. Incorporating  together the love of cuisine, music, art, dance, and decor, pioneering Chef James brings you to a world unexplored. </div>
-    </div>
-    <img src="assets/uploads/tacos.png"/>
-    <div class="home-page-text-block">
-        <h1>An inspired infusion
-        {# {{ accentColour }}
-            {{accent}} #}
-            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
-            {% set accentColour = accentColour + 1 %}
-        </h1>
-        <div>The vision of Solful Kitchen Creations is to infuse together the flavorful palettes of the Diasporic experience one plate at a time. Through Southern African- American, Latin American, and Caribbean flavors you’re sent on a journey to taste love and history. </div>
-    </div>
-    <img src="assets/uploads/corn-fritters.jpg"/>
-    <div class="home-page-text-block">
-        <h1>What we do
-        {# {{ accentColour }}
-            {{accent}} #}
-            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
-            {% set accentColour = accentColour + 1 %}
-        </h1>
-        <div>The mission and goal of Solful Kitchen Creations is to shed light on the celebration that food offers. Each dish is rich in creativity and flavor.</div>
-    </div>
-    <img src="assets/uploads/corn-fritters.jpg"/>
-    <div class="home-page-text-block">
-        <h1>Lorem ipsum
-        {# {{ accentColour }}
-            {{accent}} #}
-            <i class="fad fa-tree-palm accent {{ 'accent-' + accentColour }}"></i>
-            {% set accentColour = accentColour + 1 %}
-        </h1>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec. </div>
-    </div>
+<div id="page-content-container" class="bg-white" style="padding-top: 100vh" x-data>
+    {% for contentBlock in homePageContent.blocks %}
+        {% imageAppearEffect %}
+        {{ contentBlock.image }}
+        {% endimageAppearEffect %}
+        <div class="home-page-text-block">
+            <h1 src="{{ contentBlock.image }}">{{ contentBlock.title }}{% accent %}</h1>
+            <div src="{{ contentBlock.image }}">{{ contentBlock.text }}</div>
+        </div>
+    {% endfor %}
+    {% imageAppearEffect %}
+    {{ homePageContent.separatorImage }}
+    {% endimageAppearEffect %}
+    <h1 class="my-20">Services{% accent %}</h1>
+    {% for service in collections.services %}
+        <div class="p-10">
+            {% threeDShadow %}
+            <img src="{{ service.data.mainImage }}" class="max-h-56 w-full object-cover"/>
+            <div class="home-page-text-service p-4">
+                <h2>{{ service.data.title }}</h2>
+                <div class="p-4">{{ service.data.summary }}</div>
+                <a class="btn" href="{{service.url}}">Learn More</a>
+            </div>
+            {% endthreeDShadow %}
+        </div>
+    {% endfor %}
 </div>

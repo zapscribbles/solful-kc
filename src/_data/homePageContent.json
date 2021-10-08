@@ -1,0 +1,32 @@
+{
+    "blocks": [
+        {
+            "title": "New discoveries",
+            "image": "/assets/uploads/pineapple-salsa.jpg",
+            "text": "Solful Kitchen Creations is a unique experience encompassing the concept of culture in its entirety. Incorporating  together the love of cuisine, music, art, dance, and decor, pioneering Chef James brings you to a world unexplored."
+        },
+        {
+            "title": "An inspired infusion",
+            "image": "/assets/uploads/tacos.png",
+            "text": "The vision of Solful Kitchen Creations is to infuse together the flavorful palettes of the Diasporic experience one plate at a time. Through Southern African- American, Latin American, and Caribbean flavors you’re sent on a journey to taste love and history."
+        },
+        {
+            "title": "What we do",
+            "image": "/assets/uploads/corn-fritters.jpg",
+            "text": "The mission and goal of Solful Kitchen Creations is to shed light on the celebration that food offers. Each dish is rich in creativity and flavor."
+        }
+    ],
+    "separatorImage": "/assets/uploads/platter.jpg",
+    "services": [
+        {
+            "title": "Service One",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. Nunc et sagittis augue. Ut elit ipsum, pellentesque vel ornare quis, pellentesque id quam. Donec tincidunt venenatis dolor a feugiat. Donec.",
+            "image": "/assets/uploads/placeholder.jpg"
+        },
+        {
+            "title": "Service Two",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus, dui a condimentum semper, ex dui maximus mi, eget dapibus leo erat laoreet magna. In hac habitasse platea dictumst. ",
+            "image": "/assets/uploads/corn-fritters.jpg"
+        }
+    ]
+}

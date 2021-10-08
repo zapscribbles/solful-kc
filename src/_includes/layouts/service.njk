@@ -1,0 +1,19 @@
+---
+layout: body
+title: Service Title
+summary: Service summary
+description: Service description
+mainImage: /assets/uploads/placeholder.jpg
+otherImages:
+    - image: /assets/uploads/placeholder.jpg
+    - image: /assets/uploads/placeholder.jpg
+    - image: /assets/uploads/placeholder.jpg
+permalink: /services/{{ page.fileSlug }}/index.html
+---
+
+<h1>{{ title }}{% accent %}</h1>
+<div class="p-4">{{ description | safe }}</div>
+<img src="{{ mainImage | url }}" alt="{{ mainImage }}"/>
+{% for image in otherImages %}
+    <img src="{{ image.image | url }}" alt="{{ image.image }}"/>
+{% endfor %}

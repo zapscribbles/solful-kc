@@ -1,3 +1,9 @@
+:root {
+    --colour-teal: #51a488;
+    --colour-orange: #fd7d3d;
+    --colour-yellow: #ffbd59;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +41,7 @@ h1 {
 }
 
 h2 {
-    @apply lg:text-5xl text-2xl my-2;
+    @apply lg:text-5xl text-3xl my-4;
 }
 
 h3 {
@@ -92,7 +98,6 @@ nav.btn.active {
 
 .accent {
     @apply absolute bottom-3 right-2 !important;
-    /* @apply text-button; */
 }
 
 .accent-0 {
@@ -100,9 +105,30 @@ nav.btn.active {
 }
 
 .accent-1 {
-    @apply text-darkHighlight;
+    @apply text-medium;
 }
 
 .accent-2 {
     @apply text-light;
+}
+
+.three-d-shadow {
+    @apply transform transition-all;
+    -webkit-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+}
+
+.three-d-shadow-0 {
+    box-shadow: 10px 10px var(--colour-teal);
+    border: 1px solid var(--colour-teal);
+}
+
+.three-d-shadow-1 {
+    box-shadow: 10px 10px var(--colour-yellow);
+    border: 1px solid var(--colour-yellow);
+}
+
+.three-d-shadow-2 {
+    box-shadow: 10px 10px var(--colour-orange);
+    border: 1px solid var(--colour-orange);
 }
